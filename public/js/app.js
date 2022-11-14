@@ -2076,9 +2076,9 @@ var render = function render() {
       attrs: {
         role: "alert"
       }
-    }, [_vm._v("\n      " + _vm._s(error) + "\n    ")]);
+    }, [_vm._v("\n        " + _vm._s(error) + "\n      ")]);
   }), 0) : _vm._e(), _vm._v(" "), _c("button", {
-    staticClass: "btn btn-primary w-25 d-block mx-auto my-0",
+    staticClass: "btn btn-primary rounded-pill w-25 d-block mx-auto my-0",
     attrs: {
       type: "submit"
     }
@@ -6519,7 +6519,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "form {\n  width: 70%;\n  margin: 0 auto;\n  background-color: rgb(241, 241, 241);\n  padding: 30px;\n  border-radius: 20px;\n  box-shadow: 5px 5px 5px lightgray;\n}", ""]);
+exports.push([module.i, "form {\n  width: 70%;\n  margin: 0 auto;\n  background-color: rgb(204, 214, 237);\n  padding: 30px;\n  border-radius: 20px;\n  box-shadow: 5px 5px 5px lightgray;\n}", ""]);
 
 // exports
 

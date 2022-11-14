@@ -25,11 +25,11 @@
 
       <!-- errori cognome -->
       <div v-if="errors.user_surname">
-      <div v-for="error, index in errors.user_surname" :key="index" class="alert alert-danger" role="alert">
-        {{error}}
+        <div v-for="error, index in errors.user_surname" :key="index" class="alert alert-danger" role="alert">
+          {{error}}
+        </div>
       </div>
-    </div>
-      <button type="submit" class="btn btn-primary w-25 d-block mx-auto my-0">Invia</button>
+      <button type="submit" class="btn btn-primary rounded-pill w-25 d-block mx-auto my-0">Invia</button>
     </form>
 
     <!-- validazione backend -->
@@ -81,7 +81,7 @@ export default {
   form {
     width: 70%;
     margin: 0 auto;
-    background-color: rgb(241, 241, 241);
+    background-color: rgb(204, 214, 237);
     padding: 30px;
     border-radius: 20px;
     box-shadow: 5px 5px 5px lightgray;
