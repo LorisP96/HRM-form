@@ -4,10 +4,10 @@
     <form @submit.prevent="sendInput()">
       <h2 class="text-center">Loris' Form</h2>
 
-      <!-- Input Nome -->
+      <!-- Input Nome con validazione frontend -->
       <div class="form-group">
         <label for="name">Name</label>
-        <input type="text" class="form-control" id="name" placeholder="Name" v-model="userName">
+        <input type="text" class="form-control" id="name" placeholder="Name" v-model="userName" required maxlength="255">
       </div>
       
       <!-- errori nome -->
@@ -17,10 +17,10 @@
         </div>
       </div>
 
-      <!-- Input cognome -->
+      <!-- Input cognome con validazione frontend -->
       <div class="form-group">
         <label for="surname">Surname</label>
-        <input type="text" class="form-control" id="surname" placeholder="Surname" v-model="userSurname">
+        <input type="text" class="form-control" id="surname" placeholder="Surname" v-model="userSurname" required maxlength="255">
       </div>
 
       <!-- errori cognome -->

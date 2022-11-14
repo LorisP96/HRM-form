@@ -2022,7 +2022,9 @@ var render = function render() {
     attrs: {
       type: "text",
       id: "name",
-      placeholder: "Name"
+      placeholder: "Name",
+      required: "",
+      maxlength: "255"
     },
     domProps: {
       value: _vm.userName
@@ -2058,7 +2060,9 @@ var render = function render() {
     attrs: {
       type: "text",
       id: "surname",
-      placeholder: "Surname"
+      placeholder: "Surname",
+      required: "",
+      maxlength: "255"
     },
     domProps: {
       value: _vm.userSurname
