@@ -1912,13 +1912,16 @@ __webpack_require__.r(__webpack_exports__);
   name: 'Form',
   data: function data() {
     return {
+      // compilo le seguenti variabli con un v-model
       userName: '',
       userSurname: '',
+      // variabili per mostrare all'utente le validazioni
       success: false,
       errors: []
     };
   },
   methods: {
+    // invio tramite chiamata post i dati compilati
     sendInput: function sendInput() {
       var _this = this;
       axios.post('http://127.0.0.1:8000/api/forms', {
@@ -1926,7 +1929,10 @@ __webpack_require__.r(__webpack_exports__);
         user_surname: this.userSurname
       }).then(function (response) {
         if (response.data.success === true) {
+          // imposto la variabile a true
           _this.success = true;
+
+          // svuoto i campi
           _this.userName = '';
           _this.userSurname = '';
         } else {
@@ -1990,12 +1996,7 @@ var render = function render() {
     _c = _vm._self._c;
   return _c("div", {
     staticClass: "container"
-  }, [_vm.success === true ? _c("div", {
-    staticClass: "alert alert-success",
-    attrs: {
-      role: "alert"
-    }
-  }, [_vm._v("\n    Success!\n  ")]) : _vm._e(), _vm._v(" "), _c("form", {
+  }, [_c("form", {
     on: {
       submit: function submit($event) {
         $event.preventDefault();
@@ -2081,7 +2082,12 @@ var render = function render() {
     attrs: {
       type: "submit"
     }
-  }, [_vm._v("Invia")])])]);
+  }, [_vm._v("Invia")])]), _vm._v(" "), _vm.success === true ? _c("div", {
+    staticClass: "alert alert-success w-50 mx-auto my-3",
+    attrs: {
+      role: "alert"
+    }
+  }, [_vm._v("\n    Success!\n  ")]) : _vm._e()]);
 };
 var staticRenderFns = [];
 render._withStripped = true;

@@ -1,11 +1,6 @@
 <template>
   <div class="container">
 
-    <!-- validazione backend -->
-    <div v-if="success === true" class="alert alert-success" role="alert">
-      Success!
-    </div>
-
     <form @submit.prevent="sendInput()">
       <h2 class="text-center">Loris' Form</h2>
 
@@ -36,6 +31,11 @@
     </div>
       <button type="submit" class="btn btn-primary w-25 d-block mx-auto my-0">Invia</button>
     </form>
+
+    <!-- validazione backend -->
+    <div v-if="success === true" class="alert alert-success w-50 mx-auto my-3" role="alert">
+      Success!
+    </div>
   </div>
 </template>
 
@@ -44,13 +44,16 @@ export default {
   name: 'Form',
   data() {
     return {
+      // compilo le seguenti variabli con un v-model
       userName: '',
       userSurname: '',
+      // variabili per mostrare all'utente le validazioni
       success: false,
       errors: [],
     }
   },
   methods: {
+    // invio tramite chiamata post i dati compilati
     sendInput() {
       axios.post('http://127.0.0.1:8000/api/forms', {
         user_name: this.userName,
@@ -58,7 +61,11 @@ export default {
       })
       .then((response) => {
         if(response.data.success === true) {
+
+          // imposto la variabile a true
           this.success = true;
+
+          // svuoto i campi
           this.userName = '';
           this.userSurname = '';
         } else {
